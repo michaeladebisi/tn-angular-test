@@ -48,7 +48,7 @@ ng-serve
         <li><strong>Shared components</strong>
           <ul>
             <li>Blocks : toast & progress bar</li>
-            <li>Company-search</li>
+            <li><b>Company-search</b></li>
             <li>Forms : confirm</li>
             <li>Layouts : page & header</li>
             <li>Modals : wrapper</li>
