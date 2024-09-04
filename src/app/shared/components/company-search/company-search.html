@@ -1,0 +1,41 @@
+<h1>Company Search</h1>
+<form [formGroup]="searchForm">
+  <div class="mb-3">
+    
+    <label for="searchTerm" class="form-label">Search by name or company number</label>
+    <input type="email" class="form-control" formControlName="searchTerm" placeholder="Search..." />
+  </div>
+
+  <div class="mb-3">
+    
+    <button type="submit"  class="btn btn-primary" (click)="searchCompanies()">Search</button>
+  </div>
+  
+  
+</form>
+<div *ngIf="companies.length > 0" id="comp-list">
+  <h2>Search Results</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Company name</th>
+        <th>Address</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let company of companies; let i = index" (click)="viewCompanyDetails(company)">
+        <td> {{ i+1 }}</td>
+        <td><button class="btn btn-link"> {{ company.title }}</button></td>
+        <td>{{ company.address_snippet }})</td>
+        
+      </tr>
+      <tr>
+        </tbody>
+      </table>
+
+
+</div>
+<div *ngIf="companies.length == 0 && searchComplete" id="comp-list">
+  No results found for : {{searchForm.get('searchTerm')?.value}}
+</div>
