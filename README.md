@@ -10,8 +10,8 @@ Make sure you have the following installed :
 ### Installation
 Clone the repository :
 ```sh
-git clone https://github.com/NicolasRoehm/angular-boilerplate.git
-cd angular-boilerplate
+git clone [https://github.com/michaeladebisi/tn-angular-test.git]
+cd tn-angular-test
 npm install
 ```
 
